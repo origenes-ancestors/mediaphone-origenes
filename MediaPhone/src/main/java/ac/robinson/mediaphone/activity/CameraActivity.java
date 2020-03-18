@@ -73,6 +73,7 @@ import java.util.concurrent.Semaphore;
 import ac.robinson.mediaphone.MediaPhone;
 import ac.robinson.mediaphone.MediaPhoneActivity;
 import ac.robinson.mediaphone.R;
+import ac.robinson.mediaphone.ancestors.PhotoListActivity;
 import ac.robinson.mediaphone.provider.FrameItem;
 import ac.robinson.mediaphone.provider.MediaItem;
 import ac.robinson.mediaphone.provider.MediaManager;
@@ -497,6 +498,11 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 				View pictureButton = findViewById(R.id.button_take_picture);
 				pictureButton.setLayoutParams(new LinearLayout.LayoutParams(matchParent, matchParent, 1));
 
+				View ancestryButton = findViewById(R.id.button_import_ancestry);
+				controlsLayout.removeView(ancestryButton);
+				ancestryButton.setLayoutParams(new LinearLayout.LayoutParams(matchParent, matchParent, 1));
+				controlsLayout.addView(ancestryButton);
+
 				View importButton = findViewById(R.id.button_import_image);
 				controlsLayout.removeView(importButton);
 				importButton.setLayoutParams(new LinearLayout.LayoutParams(matchParent, matchParent, 1));
@@ -539,6 +545,10 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 				controlsLayout.setLayoutParams(controlsLayoutParams);
 
 				// reverse button order
+				View ancestryButton = findViewById(R.id.button_import_ancestry);
+				controlsLayout.removeView(ancestryButton);
+				controlsLayout.addView(ancestryButton);
+
 				View importButton = findViewById(R.id.button_import_image);
 				controlsLayout.removeView(importButton);
 				controlsLayout.addView(importButton);
@@ -586,6 +596,11 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 				controlsLayout.removeView(importButton);
 				importButton.setLayoutParams(new LinearLayout.LayoutParams(matchParent, matchParent, 1));
 				controlsLayout.addView(importButton);
+
+				View ancestryButton = findViewById(R.id.button_import_ancestry);
+				controlsLayout.removeView(ancestryButton);
+				ancestryButton.setLayoutParams(new LinearLayout.LayoutParams(matchParent, matchParent, 1));
+				controlsLayout.addView(ancestryButton);
 
 				View pictureButton = findViewById(R.id.button_take_picture);
 				controlsLayout.removeView(pictureButton);
@@ -1147,6 +1162,11 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 				builder.show();
 				break;
 
+			case R.id.button_import_ancestry:
+				startActivityForResult(new Intent(CameraActivity.this, PhotoListActivity.class),
+						MediaPhone.R_id_intent_ancestry_import);
+				break;
+
 			case R.id.button_import_image:
 				importImage();
 				break;
@@ -1291,6 +1311,7 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 			// animate rotating the button icons
 			Resources res = getResources();
 			animateButtonRotation(res, animation, R.id.button_take_picture, R.drawable.ic_menu_take_picture, mIconRotation);
+			animateButtonRotation(res, animation, R.id.button_import_ancestry, R.drawable.ic_history_black, mIconRotation);
 			animateButtonRotation(res, animation, R.id.button_import_image, R.drawable.ic_menu_import_picture, mIconRotation);
 
 			if (findViewById(R.id.button_cancel_camera).getVisibility() == View.VISIBLE) {
@@ -1319,6 +1340,61 @@ public class CameraActivity extends MediaPhoneActivity implements OrientationMan
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent resultIntent) {
 		switch (requestCode) {
+			case MediaPhone.R_id_intent_ancestry_import:
+				// TODO: this is a slight duplication of code in MediaPhoneActivity and NarrativeBrowserActivity - combine more?
+				if (resultCode != RESULT_OK) {
+					onBackgroundTaskCompleted(R.id.import_external_media_cancelled);
+					break;
+				}
+
+				final String selectedAncestorImage = resultIntent.getStringExtra(getString(R.string.extra_resource_url));
+				runQueuedBackgroundTask(new BackgroundRunnable() {
+					boolean mImportSucceeded = false;
+
+					@Override
+					public int getTaskId() {
+						return mImportSucceeded ? R.id.import_external_media_succeeded : R.id.import_external_media_failed;
+					}
+
+					@Override
+					public boolean getShowDialog() {
+						return true;
+					}
+
+					@Override
+					public void run() {
+						ContentResolver contentResolver = getContentResolver();
+						MediaItem imageMediaItem = MediaManager.findMediaByInternalId(contentResolver, mMediaItemInternalId);
+						if (imageMediaItem != null) {
+							InputStream inputStream = getAncestorImageInputStream(selectedAncestorImage);
+
+							if (inputStream != null) {
+								// copy to a temporary file so we can detect failure (i.e. connection)
+								String fileExtension = "jpg"; // always jpg from Origenes platform
+								File tempFile = MediaItem.getFile(imageMediaItem.getParentId(),
+										MediaPhoneProvider.getNewInternalId(), fileExtension);
+
+								try {
+									IOUtilities.copyFile(inputStream, tempFile);
+								} catch (Throwable ignored) {
+								} finally {
+									IOUtilities.closeStream(inputStream);
+								}
+
+								if (tempFile.length() > 0) {
+									imageMediaItem.setFileExtension(fileExtension);
+									imageMediaItem.setType(MediaPhoneProvider.TYPE_IMAGE_BACK);
+									// TODO: will leave old item behind if the extension has changed - fix
+									tempFile.renameTo(imageMediaItem.getFile());
+									MediaManager.updateMedia(contentResolver, imageMediaItem);
+									mImportSucceeded = true;
+								}
+							}
+						}
+					}
+				});
+				break;
+
 			case MediaPhone.R_id_intent_picture_import:
 				mImagePickerShown = false;
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:focusableInTouchMode="true"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"><!-- focusable is so that SearchView is *not* focused by default -->
+
+	<androidx.appcompat.widget.SearchView
+		android:id="@+id/search_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:defaultQueryHint="@string/search_hint"
+		app:iconifiedByDefault="false" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recycler_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/search_view" />
+
+	<ProgressBar
+		android:id="@+id/main_progress"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true" />
+
+	<RelativeLayout
+		android:id="@+id/login_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white">
+
+		<EditText
+			android:id="@+id/login_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:gravity="center_horizontal"
+			android:hint="@string/password"
+			android:imeOptions="actionGo"
+			android:inputType="textPassword"
+			android:minWidth="128dp"
+			android:textSize="24sp" />
+
+		<Button
+			android:id="@+id/login_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/login_text"
+			android:layout_centerHorizontal="true"
+			android:onClick="loginClick"
+			android:text="@string/login" />
+
+	</RelativeLayout>
+
+</RelativeLayout>

@@ -134,6 +134,12 @@
 	<string name="import_multiple_items_succeeded">Importación completa – cada elemento se ha agregado a un nuevo cuadro después de este</string>
 	<string name="import_multiple_items_failed">No se puede completar la importación de elementos múltiples – por favor, compruebe los cuadros después de este para ver si hay errores</string>
 
+	<!-- ancestor-specific items -->
+	<string name="search_hint">Buscar…</string>
+	<string name="password">Clave de acceso</string>
+	<string name="login">Iniciar sesión</string>
+	<string name="login_failed">No se puede iniciar sesión. Por favor, compruebe su contraseña.</string>
+
 	<plurals name="delete_narrative_second_hint">
 		<item quantity="one">Toda la narrativa (%1$d cuadro) será permanentemente borrada</item>
 		<item quantity="other">Toda la narrativa (%1$d cuadros) será permanentemente borrada</item>
@@ -266,6 +272,7 @@
 	<string name="menu_add_frame">Agregar cuadro después</string>
 	<string name="menu_play_narrative">Reproducir / exportar</string>
 	<string name="menu_export">Exportar</string>
+	<string name="menu_logout">Cerrar sesión</string><!-- note: ancestor-specific -->
 
 	<!-- accessibility -->
 	<string name="hint_narrative_item">Marco narrativa</string>

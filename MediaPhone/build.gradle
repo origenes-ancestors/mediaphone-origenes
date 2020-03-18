@@ -4,15 +4,16 @@ android {
 	compileSdkVersion 29
 
 	defaultConfig {
-		manifestPlaceholders = [providerId: 'mediaphone']
+		manifestPlaceholders = [providerId: 'mediaphone_ancestors']
 		applicationId 'ac.robinson.' + manifestPlaceholders.providerId
 		buildConfigField 'String', 'PROVIDER_ID', '"' + manifestPlaceholders.providerId + '"'
 
 		minSdkVersion 14
 		targetSdkVersion 29
-		versionCode 37
+		versionCode 36
 		versionName '1.6.1'
-		resConfigs 'en', 'es', 'fr', 'nl', 'pt', 'pl', 'ru'
+		// versionNameSuffix = 'beta'
+		resConfigs 'es', 'en'
 	}
 
 	buildTypes {
@@ -23,9 +24,14 @@ android {
 
 		release {
 			minifyEnabled true
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-mediaphone.txt'
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-mediaphone.txt',
+					'proguard-mediaphone_ancestors.txt'
 
 			shrinkResources true
+
+			ndk {
+				abiFilters 'arm64-v8a', 'armeabi-v7a' // filter out Fresco's x86 and x86_64 (filesize is more important here)
+			}
 		}
 	}
 }
@@ -36,6 +42,11 @@ dependencies {
 	implementation 'com.google.android.material:material:1.1.0'
 	implementation 'androidx.exifinterface:exifinterface:1.1.0' // for auto-selection of export resolution
 	implementation 'androidx.core:core:1.2.0' // for FileProvider
+
+	implementation 'com.facebook.fresco:fresco:2.1.0' // for ancestor image loading
+	implementation 'com.squareup.retrofit2:retrofit:2.5.0' // for API queries
+	implementation 'com.squareup.retrofit2:converter-gson:2.5.0' // for easier JSON parsing/serialisation
+	implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0' // for debugging
 
 	implementation 'com.google.code.findbugs:annotations:3.0.1', {
 		// Need to exclude these, or build is broken by:

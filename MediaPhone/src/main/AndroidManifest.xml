@@ -4,6 +4,8 @@
 	package="ac.robinson.mediaphone"
 	android:installLocation="auto">
 
+	<uses-permission android:name="android.permission.INTERNET" /> <!-- for loading ancestor data -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- for caching where appropriate -->
 	<uses-permission android:name="android.permission.BLUETOOTH" />
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -102,6 +104,15 @@
 		<activity
 			android:name="ac.robinson.mediautilities.SelectDirectoryActivity"
 			android:label="@string/title_select_import_directory" />
+		<activity
+			android:name=".ancestors.PhotoListActivity"
+			android:label="@string/title_camera" />
+		<activity
+			android:name=".ancestors.PhotoDetailActivity"
+			android:label="@string/title_camera" />
+		<activity
+			android:name=".ancestors.PersonDetailActivity"
+			android:label="@string/title_camera" />
 
 		<provider
 			android:name=".provider.MediaPhoneProvider"

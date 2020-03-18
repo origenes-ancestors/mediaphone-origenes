@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:fresco="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/ancestor_image"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:background="#3b3b3b"
+			android:maxHeight="360dp"
+			android:onClick="handleButtonClicks"
+			fresco:actualImageScaleType="fitCenter"
+			fresco:placeholderImage="@drawable/ic_person" />
+
+		<TextView
+			android:id="@+id/ancestor_description"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginEnd="8dp"
+			android:textSize="16sp"
+			tools:text="A short description of the people who are shown in this photo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." />
+
+		<TextView
+			android:id="@+id/ancestor_tags"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:textSize="32sp" /><!-- textSize affects tag spacing) -->
+
+		<LinearLayout
+			android:id="@+id/photo_person_holder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginBottom="8dp"
+			android:orientation="vertical" />
+
+		<!--<View-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="1dp"-->
+		<!--android:layout_marginTop="8dp"-->
+		<!--android:background="#3b3b3b" />-->
+
+		<!--<RelativeLayout-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_margin="8dp">-->
+
+		<!--<TextView-->
+		<!--android:id="@+id/comment_name_1"-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_alignParentStart="true"-->
+		<!--android:layout_alignParentLeft="true"-->
+		<!--android:layout_alignParentTop="true"-->
+		<!--android:textSize="18sp"-->
+		<!--tools:text="Viviana" />-->
+
+		<!--<TextView-->
+		<!--android:id="@+id/comment_date_1"-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_below="@id/comment_name_1"-->
+		<!--android:layout_alignParentStart="true"-->
+		<!--android:layout_alignParentLeft="true"-->
+		<!--android:textSize="12sp"-->
+		<!--tools:text="2nd Dec 2018" />-->
+
+		<!--<TextView-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_marginStart="8dp"-->
+		<!--android:layout_marginLeft="8dp"-->
+		<!--android:layout_toEndOf="@id/comment_date_1"-->
+		<!--android:layout_toRightOf="@id/comment_date_1"-->
+		<!--android:textSize="16sp"-->
+		<!--tools:text="A comment about this photo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />-->
+		<!--</RelativeLayout>-->
+
+		<!--<RelativeLayout-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_margin="8dp">-->
+
+		<!--<TextView-->
+		<!--android:id="@+id/comment_name_2"-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_alignParentStart="true"-->
+		<!--android:layout_alignParentLeft="true"-->
+		<!--android:layout_alignParentTop="true"-->
+		<!--android:textSize="18sp"-->
+		<!--tools:text="Mariela" />-->
+
+		<!--<TextView-->
+		<!--android:id="@+id/comment_date_2"-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_below="@id/comment_name_2"-->
+		<!--android:layout_alignParentStart="true"-->
+		<!--android:layout_alignParentLeft="true"-->
+		<!--android:textSize="12sp"-->
+		<!--tools:text="3rd Dec 2018" />-->
+
+		<!--<TextView-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_marginStart="8dp"-->
+		<!--android:layout_marginLeft="8dp"-->
+		<!--android:layout_toEndOf="@id/comment_date_2"-->
+		<!--android:layout_toRightOf="@id/comment_date_2"-->
+		<!--android:textSize="16sp"-->
+		<!--tools:text="Another comment about this photo. Lorem ipsum dolor sit amet, consectetur adipiscing." />-->
+		<!--</RelativeLayout>-->
+
+	</LinearLayout>
+
+</ScrollView>

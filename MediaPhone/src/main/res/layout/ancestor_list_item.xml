@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ac.robinson.mediaphone.ancestors.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/ancestor_list_image"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		fresco:actualImageScaleType="centerCrop"
+		fresco:placeholderImage="@drawable/ic_person"
+		fresco:placeholderImageScaleType="centerCrop" />
+</ac.robinson.mediaphone.ancestors.SquareRelativeLayout>

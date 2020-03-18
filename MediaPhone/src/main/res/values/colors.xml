@@ -2,10 +2,11 @@
 <resources>
 
 	<!-- theme -->
-	<color name="primary">#ff9800</color>
-	<color name="primary_dark">#f57c00</color>
-	<color name="primary_task_description">#d7761e</color>
-	<color name="accent">#ff6d00</color>
+	<!-- see: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=880E4F&secondary.color=01579B -->
+	<color name="primary">#d32f2f</color>
+	<color name="primary_dark">#b71c1c</color>
+	<color name="primary_task_description">@color/primary</color>
+	<color name="accent">#ed3538</color>
 	<color name="ic_launcher_background">#ffffff</color>
 
 	<!-- defaults/generic -->
@@ -18,7 +19,7 @@
 	<color name="narrative_list_dark">#ffe4e4e4</color>
 
 	<!-- template browser -->
-	<color name="template_list_light">#ffffe0b2</color>
+	<color name="template_list_light">#ffeddcdc</color>
 	<color name="template_list_dark">@color/template_list_light</color>
 
 	<!-- frame icons -->
