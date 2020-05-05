@@ -36,7 +36,7 @@
 	<string name="export_narrative_title">Exportar esta narrativa</string>
 	<string name="export_video">Video (compartir, cargar, YouTube)</string>
 	<string name="export_html">HTML (crear una página web)</string>
-	<string name="export_smil">SMIL (enviar a %1$ss)</string>
+	<string name="export_smil">SMIL (enviar a %1$s)</string>
 	<string name="export_narrative_failed">Error: no se puede exportar la narración – por favor, inténtelo de nuevo</string>
 	<string name="export_missing_directory">Error: no se puede encontrar un directorio temporal – por favor, asegúrese de que su dispositivo o tarjeta SD tenga espacio libre disponible</string>
 	<string name="export_potential_problem">Advertencia: no se encontró almacenamiento externo – en algunos dispositivos, esto puede causar problemas de exportación y es posible que tenga problemas para reproducir la narrativa.</string>

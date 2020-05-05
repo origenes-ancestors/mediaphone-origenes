@@ -36,7 +36,7 @@
 	<string name="export_narrative_title">Экспортировать данную историю</string>
 	<string name="export_video">Видео (поделиться, закачать, YouTube)</string>
 	<string name="export_html">HTML (создать веб-страницу)</string>
-	<string name="export_smil">SMIL (отправить в %1$ss)</string>
+	<string name="export_smil">SMIL (отправить в %1$s)</string>
 	<string name="export_narrative_failed">Ошибка: сбой в процессе экспортирования – пожалуйста, повторите попытку</string>
 	<string name="export_missing_directory">Ошибка: временное хранилище не найдено – пожалуйста, убедитесь, что на вашем устройстве или SD-карте достаточно места</string>
 	<string name="export_potential_problem">Предупреждение: дополнительное хранилище не обнаружено - на некоторых устройствах это может привести к проблеме с проигрыванием истории</string>
