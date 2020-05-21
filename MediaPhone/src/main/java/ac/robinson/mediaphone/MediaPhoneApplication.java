@@ -82,6 +82,7 @@ public class MediaPhoneApplication extends Application {
 	// necessary for getting cache directory and network state in OkHttp and Retrofit
 	public static WeakReference<Context> mCacheContext;
 
+	// TODO: should we try to work around this method not being called? https://stackoverflow.com/a/60597718/1993220
 	@Override
 	public void onCreate() {
 		// if (MediaPhone.DEBUG) {
