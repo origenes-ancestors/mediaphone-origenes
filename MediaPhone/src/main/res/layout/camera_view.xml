@@ -138,6 +138,14 @@
 			android:drawableTop="@drawable/ic_menu_import_picture" />
 
 		<ac.robinson.view.CenteredImageTextButton
+			android:id="@+id/button_import_ancestry"
+			style="@style/default_coloured_button"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:contentDescription="@string/import_file"
+			android:drawableTop="@drawable/ic_history_black" />
+
+		<ac.robinson.view.CenteredImageTextButton
 			android:id="@+id/button_take_picture"
 			style="@style/default_coloured_button"
 			android:layout_width="0dp"

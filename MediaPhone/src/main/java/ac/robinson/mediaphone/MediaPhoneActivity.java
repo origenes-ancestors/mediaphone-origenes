@@ -54,6 +54,7 @@ import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Video;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.GestureDetector;
@@ -68,8 +69,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.facebook.binaryresource.BinaryResource;
+import com.facebook.cache.common.CacheKey;
+import com.facebook.cache.disk.FileCache;
+import com.facebook.imagepipeline.cache.DefaultCacheKeyFactory;
+import com.facebook.imagepipeline.core.ImagePipelineFactory;
+import com.facebook.imagepipeline.request.ImageRequest;
+
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -86,6 +96,7 @@ import ac.robinson.mediaphone.activity.PreferencesActivity;
 import ac.robinson.mediaphone.activity.SaveNarrativeActivity;
 import ac.robinson.mediaphone.activity.SendNarrativeActivity;
 import ac.robinson.mediaphone.activity.TemplateBrowserActivity;
+import ac.robinson.mediaphone.ancestors.api.OrigenesApi;
 import ac.robinson.mediaphone.importing.ImportedFileParser;
 import ac.robinson.mediaphone.provider.FrameItem;
 import ac.robinson.mediaphone.provider.FrameItem.NavigationMode;
@@ -119,6 +130,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.exifinterface.media.ExifInterface;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public abstract class MediaPhoneActivity extends AppCompatActivity {
 
@@ -1420,6 +1433,36 @@ public abstract class MediaPhoneActivity extends AppCompatActivity {
 		mediaItem.setSpanFrames(!isFrameSpanning);
 		MediaManager.updateMedia(getContentResolver(), mediaItem);
 		return !isFrameSpanning;
+	}
+
+	protected InputStream getAncestorImageInputStream(String imageUri) {
+		if (TextUtils.isEmpty(imageUri)) {
+			return null;
+		}
+
+		try {
+			// first check to see whether the image is in Fresco's cache
+			ImageRequest downloadRequest = ImageRequest.fromUri(imageUri);
+			CacheKey cacheKey = null;
+			if (downloadRequest != null) {
+				cacheKey = DefaultCacheKeyFactory.getInstance().getEncodedCacheKey(downloadRequest, MediaPhoneActivity.this);
+			}
+			FileCache fileCache = ImagePipelineFactory.getInstance().getMainFileCache();
+			if (fileCache.hasKey(cacheKey)) {
+				BinaryResource resource = fileCache.getResource(cacheKey);
+				return resource.openStream();
+			}
+
+			// if not, re-download (synchronously as we are in a background thread)
+			Request request = new Request.Builder().url(imageUri).build();
+			Response response = OrigenesApi.getOkHttpClient().newCall(request).execute();
+			if (response.body() != null) {
+				return new BufferedInputStream(response.body().byteStream());
+			}
+		} catch (Throwable ignored) {
+		}
+
+		return null;
 	}
 
 	protected interface ImportMediaCallback {

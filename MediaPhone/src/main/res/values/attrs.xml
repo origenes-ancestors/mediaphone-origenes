@@ -158,6 +158,7 @@
 	<string name="key_about_application" translatable="false">about_application</string>
 	<string name="key_contact_us" translatable="false">contact_us</string>
 	<string name="key_install_helper_narrative" translatable="false">install_helper_narrative</string>
+	<string name="key_api_password" translatable="false">api_password</string><!-- note: ancestor-specific -->
 
 	<!-- keys for hidden "preferences" -->
 	<string name="key_application_version" translatable="false">key_application_version</string>
@@ -195,6 +196,8 @@
 	<string name="extra_start_scrolled_to_end" translatable="false">start_scrolled_to_end</string>
 	<string name="extra_resource_id" translatable="false">resource_id</string>
 	<string name="extra_exported_content" translatable="false">exported_content</string>
+	<string name="extra_resource_url" translatable="false">resource_url</string><!-- note: ancestor-specific -->
+	<string name="extra_password_failure" translatable="false">password_failure</string><!-- note: ancestor-specific -->
 
 	<!-- layout related -->
 	<dimen name="button_padding">5dp</dimen>

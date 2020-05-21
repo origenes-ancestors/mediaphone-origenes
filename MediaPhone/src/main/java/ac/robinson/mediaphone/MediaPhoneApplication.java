@@ -44,6 +44,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.WindowManager;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -77,6 +79,9 @@ public class MediaPhoneApplication extends Application {
 	// for clients to communicate with the ImportingService
 	private final Messenger mImportingServiceMessenger = new Messenger(new ImportingServiceMessageHandler());
 
+	// necessary for getting cache directory and network state in OkHttp and Retrofit
+	public static WeakReference<Context> mCacheContext;
+
 	// TODO: should we try to work around this method not being called? https://stackoverflow.com/a/60597718/1993220
 	@Override
 	public void onCreate() {
@@ -89,6 +94,8 @@ public class MediaPhoneApplication extends Application {
 		initialiseParameters();
 		startWatchingExternalStorage();
 		createNotificationChannel();
+		Fresco.initialize(MediaPhoneApplication.this);
+		mCacheContext = new WeakReference<>(getApplicationContext());
 	}
 
 	private void initialiseDirectories() {

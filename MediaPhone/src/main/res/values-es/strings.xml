@@ -36,7 +36,7 @@
 	<string name="export_narrative_title">Exportar esta narrativa</string>
 	<string name="export_video">Video (compartir, cargar, YouTube)</string>
 	<string name="export_html">HTML (crear una página web)</string>
-	<string name="export_smil">SMIL (enviar a %1$ss)</string>
+	<string name="export_smil">SMIL (enviar a %1$s)</string>
 	<string name="export_narrative_failed">Error: no se puede exportar la narración – por favor, inténtelo de nuevo</string>
 	<string name="export_missing_directory">Error: no se puede encontrar un directorio temporal – por favor, asegúrese de que su dispositivo o tarjeta SD tenga espacio libre disponible</string>
 	<string name="export_potential_problem">Advertencia: no se encontró almacenamiento externo – en algunos dispositivos, esto puede causar problemas de exportación y es posible que tenga problemas para reproducir la narrativa.</string>
@@ -133,6 +133,12 @@
 	<string name="permission_audio_error">Error: el acceso al micrófono no se ha otorgado. Por favor, permita que %1$s acceda al micrófono y vuelva a intentarlo</string>
 	<string name="import_multiple_items_succeeded">Importación completa – cada elemento se ha agregado a un nuevo cuadro después de este</string>
 	<string name="import_multiple_items_failed">No se puede completar la importación de elementos múltiples – por favor, compruebe los cuadros después de este para ver si hay errores</string>
+
+	<!-- ancestor-specific items -->
+	<string name="search_hint">Buscar…</string>
+	<string name="password">Clave de acceso</string>
+	<string name="login">Iniciar sesión</string>
+	<string name="login_failed">No se puede iniciar sesión. Por favor, compruebe su contraseña.</string>
 
 	<plurals name="delete_narrative_second_hint">
 		<item quantity="one">Toda la narrativa (%1$d cuadro) será permanentemente borrada</item>
@@ -266,6 +272,7 @@
 	<string name="menu_add_frame">Agregar cuadro después</string>
 	<string name="menu_play_narrative">Reproducir / exportar</string>
 	<string name="menu_export">Exportar</string>
+	<string name="menu_logout">Cerrar sesión</string><!-- note: ancestor-specific -->
 
 	<!-- accessibility -->
 	<string name="hint_narrative_item">Marco narrativa</string>

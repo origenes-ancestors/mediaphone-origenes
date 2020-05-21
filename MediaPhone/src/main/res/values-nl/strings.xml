@@ -36,7 +36,7 @@
 	<string name="export_narrative_title">Deze verhaallijn exporteren</string>
 	<string name="export_video">Video (delen, uploaden, YouTube)</string>
 	<string name="export_html">HTML (webpagina creëren)</string>
-	<string name="export_smil">SMIL (versturen naar %1$ss)</string>
+	<string name="export_smil">SMIL (versturen naar %1$s)</string>
 	<string name="export_narrative_failed">Fout: verhaallijn kan niet worden geëxporteerd – probeer het opnieuw</string>
 	<string name="export_missing_directory">Fout: kan geen tijdelijke map vinden – zorg ervoor dat je apparaat of SD-kaart beschikt over voldoende vrije ruimte</string>
 	<string name="export_potential_problem">Waarschuwing: geen externe opslag gevonden – op sommige apparaten kan dit leiden tot export en afspeelproblemen</string>

@@ -2,7 +2,7 @@
 <resources>
 
 	<!-- application properties -->
-	<string name="app_name" translatable="false">Com-Phone</string>
+	<string name="app_name" translatable="false">Orígenes</string>
 
 	<!-- defaults/generic -->
 	<string name="button_ok">OK</string>
@@ -42,7 +42,7 @@
 	<string name="export_icon_two_way" translatable="false">&#x2191;&#x2193;&#160;&#160;%1$s</string>
 	<string name="export_video">Video (share, upload, YouTube)</string>
 	<string name="export_html">HTML (create a webpage)</string>
-	<string name="export_smil">SMIL (send to %1$ss)</string>
+	<string name="export_smil">SMIL (send to %1$s)</string>
 	<string name="export_narrative_failed">Error: failed to export the narrative – please try again</string>
 	<string name="export_missing_directory">Error: unable to find a temporary directory – please ensure your device or SD card has free space available</string>
 	<string name="export_potential_problem">Warning: No external storage found – on some devices this can cause export issues, and you may encounter problems playing the narrative</string>
@@ -140,6 +140,13 @@
 	<string name="permission_audio_error">Error: microphone access has not been granted. Please allow %1$s to access the microphone and try again</string>
 	<string name="import_multiple_items_succeeded">Import complete – each item has been added to a new frame after this one</string>
 	<string name="import_multiple_items_failed">Unable to complete multi-item import – please check frames after this one for errors</string>
+
+	<!-- ancestor-specific items -->
+	<string name="ancestor_relationship" translatable="false">%1$s (%2$s)</string>
+	<string name="search_hint">Search…</string>
+	<string name="password">Access key</string>
+	<string name="login">Log in</string>
+	<string name="login_failed">Unable to log in. Please check your password.</string>
 
 	<plurals name="delete_narrative_second_hint">
 		<item quantity="one">The entire narrative (%1$d frame) will be permanently deleted</item>
@@ -282,6 +289,7 @@
 	<string name="menu_add_frame">Add frame after</string>
 	<string name="menu_play_narrative">Play / export</string>
 	<string name="menu_export">Export</string>
+	<string name="menu_logout">Log out</string><!-- note: ancestor-specific -->
 	<string name="menu_preferences" translatable="false">@string/title_preferences</string>
 
 	<!-- accessibility -->

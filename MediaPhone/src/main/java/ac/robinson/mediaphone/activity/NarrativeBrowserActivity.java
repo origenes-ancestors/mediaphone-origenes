@@ -27,11 +27,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,9 +47,17 @@ import android.widget.AdapterView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.facebook.binaryresource.BinaryResource;
+import com.facebook.cache.common.CacheKey;
+import com.facebook.cache.disk.FileCache;
+import com.facebook.imagepipeline.cache.DefaultCacheKeyFactory;
+import com.facebook.imagepipeline.core.ImagePipelineFactory;
+import com.facebook.imagepipeline.request.ImageRequest;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -54,8 +65,14 @@ import ac.robinson.mediaphone.BrowserActivity;
 import ac.robinson.mediaphone.MediaPhone;
 import ac.robinson.mediaphone.MediaPhoneApplication;
 import ac.robinson.mediaphone.R;
+import ac.robinson.mediaphone.ancestors.PhotoListActivity;
+import ac.robinson.mediaphone.ancestors.api.OrigenesApi;
 import ac.robinson.mediaphone.provider.FrameAdapter;
 import ac.robinson.mediaphone.provider.FrameItem;
+import ac.robinson.mediaphone.provider.FramesManager;
+import ac.robinson.mediaphone.provider.MediaItem;
+import ac.robinson.mediaphone.provider.MediaManager;
+import ac.robinson.mediaphone.provider.MediaPhoneProvider;
 import ac.robinson.mediaphone.provider.NarrativeAdapter;
 import ac.robinson.mediaphone.provider.NarrativeItem;
 import ac.robinson.mediaphone.provider.NarrativesManager;
@@ -66,6 +83,7 @@ import ac.robinson.mediaphone.view.NarrativeViewHolder;
 import ac.robinson.mediaphone.view.NarrativesListView;
 import ac.robinson.mediautilities.MediaUtilities;
 import ac.robinson.util.DebugUtilities;
+import ac.robinson.util.IOUtilities;
 import ac.robinson.util.ImageCacheUtilities;
 import ac.robinson.util.UIUtilities;
 import androidx.annotation.NonNull;
@@ -76,6 +94,8 @@ import androidx.core.content.ContextCompat;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class NarrativeBrowserActivity extends BrowserActivity {
 
@@ -219,11 +239,28 @@ public class NarrativeBrowserActivity extends BrowserActivity {
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				return true;
+			case R.id.menu_add_narrative:
+				startActivityForResult(new Intent(NarrativeBrowserActivity.this, PhotoListActivity.class),
+						MediaPhone.R_id_intent_ancestry_import);
+				return true;
 			case R.id.menu_scan_imports:
 				importNarratives();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	protected void onBackgroundTaskCompleted(int taskId) {
+		switch (taskId) {
+			case R.id.import_external_media_succeeded: // nothing to do
+				break;
+			case R.id.import_external_media_failed:
+				UIUtilities.showToast(NarrativeBrowserActivity.this, R.string.import_picture_failed);
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -783,6 +820,71 @@ public class NarrativeBrowserActivity extends BrowserActivity {
 				break;
 
 			case MediaPhone.R_id_intent_template_browser:
+				break;
+
+			case MediaPhone.R_id_intent_ancestry_import:
+				// TODO: this is a slight duplication of code in MediaPhoneActivity and CameraActivity - combine more?
+				if (resultCode != RESULT_OK) {
+					break;
+				}
+
+				final String selectedAncestorImage = resultIntent.getStringExtra(getString(R.string.extra_resource_url));
+				runQueuedBackgroundTask(new BackgroundRunnable() {
+					boolean mImportSucceeded = false;
+
+					@Override
+					public int getTaskId() {
+						return mImportSucceeded ? R.id.import_external_media_succeeded : R.id.import_external_media_failed;
+					}
+
+					@Override
+					public boolean getShowDialog() {
+						return true;
+					}
+
+					@Override
+					public void run() {
+						InputStream inputStream = getAncestorImageInputStream(selectedAncestorImage);
+						if (inputStream != null) {
+							// a new narrative is required when importing from the narrative browser
+							ContentResolver contentResolver = getContentResolver();
+							Resources resources = getResources();
+							String narrativeId = MediaPhoneProvider.getNewInternalId();
+							FrameItem newFrameItem = new FrameItem(narrativeId, 0);
+							FramesManager.addFrame(resources, contentResolver, newFrameItem, false);
+
+							// copy to a temporary file so we can detect failure (i.e. connection)
+							String fileExtension = "jpg"; // always jpg from Origenes platform
+							String tempId = MediaPhoneProvider.getNewInternalId();
+							File tempFile = MediaItem.getFile(newFrameItem.getInternalId(), tempId, fileExtension);
+
+							try {
+								IOUtilities.copyFile(inputStream, tempFile);
+							} catch (Throwable ignored) {
+							} finally {
+								IOUtilities.closeStream(inputStream);
+							}
+
+							if (tempFile.length() > 0) {
+								NarrativeItem newNarrative = new NarrativeItem(narrativeId,
+										NarrativesManager.getNextNarrativeExternalId(contentResolver));
+								NarrativesManager.addNarrative(contentResolver, newNarrative);
+
+								MediaItem imageMediaItem = new MediaItem(newFrameItem.getInternalId(), fileExtension,
+										MediaPhoneProvider.TYPE_IMAGE_BACK);
+								MediaManager.addMedia(contentResolver, imageMediaItem);
+
+								// TODO: will leave old item behind if the extension has changed - fix
+								tempFile.renameTo(imageMediaItem.getFile());
+								FramesManager.updateFrame(resources, contentResolver, newFrameItem, true);
+
+								mImportSucceeded = true;
+							} else {
+								FramesManager.deleteFrameFromBackgroundTask(contentResolver, newFrameItem.getInternalId());
+							}
+						}
+					}
+				});
 				break;
 
 			default:
