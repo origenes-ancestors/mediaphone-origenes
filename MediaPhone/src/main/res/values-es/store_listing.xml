@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-	<string name="short_description" tools:ignore="UnusedResources">Crear, contar, compartir y disfrutar historias digitales multimedia</string>
-	<string name="full_description" tools:ignore="UnusedResources">Com-Phone lo ayuda a crear narrativas multimedia, combinando fotos, audio y texto de maneras emocionantes para contar historias digitales. La interfaz simple de la aplicación te ayuda a crear tus propias presentaciones de diapositivas para documentar tu vida; enviar a otros dispositivos que tienen la aplicación o reproducir localmente; crear plantillas; exportar como una película; subir a YouTube; o guardar una versión web para auto-publicar.<br />
-Cada historia puede incluir cualquier cantidad de cuadros multimedia. Cada cuadro individual de la historia puede incluir una imagen o foto, hasta tres capas de música o pistas musicales y contenido de texto. Cualquier cosa en un cuadro se puede editar en cualquier momento – por ejemplo, puede pausar la grabación de audio y luego reanudarla más tarde, o cargar imágenes de su biblioteca multimedia. Todos los elementos de cada cuadro son opcionales. Por ejemplo, Com-Phone también se puede utilizar como un diario fotográfico, un grabador de audio simple, una herramienta de texto y sonido para la discusión sobre eventos actuales, o incluso una herramienta de encuesta multimedia.<br />
-Un sencillo manual de usuario imprimible está disponible en: https://digitaleconomytoolkit.org/manuals/com-phone.pdf<br /><br />
+	<string name="short_description" tools:ignore="UnusedResources">Crear, compartir y disfrutar álbumes digitales y archivos comunitarios</string>
+	<string name="full_description" tools:ignore="UnusedResources"><![CDATA[
+<p>Orígenes permite construir álbumes digitales a partir de fotos nuevas o de imágenes existentes, a las que se les puede agregar audios, textos e información genealógica. Orígenes es completamente gratuita, y no tiene anuncios ni permisos innecesarios. Los álbumes (o “narrativas”) pueden permanecer exclusivamente en el celular o tablet en el que fueron creados, o bien ser compartidos con personas específicas, y también exportados en formato de video.</p>
+<p>Cada narrativa puede incluir la cantidad de cuadros multimedia que desees. Cada cuadro puede incluir una imagen o foto, texto, y hasta tres capas de música o audio. Todos los elementos de cada cuadro son opcionales y se pueden editar en cualquier momento. Por ejemplo, se puede pausar la grabación de audio y luego reanudarla más tarde, o cargar imágenes de tu biblioteca multimedia. Orígenes también se puede utilizar simplemente como diario fotográfico, grabador de audio, herramienta de texto y sonido para referirse a noticias de actualidad, o incluso como una herramienta de encuesta multimedia.</p>
+<p>La app se complementa con una plataforma que permite crear un repositorio comunitario a partir de archivos de imagen, documentos, materiales audiovisuales, etc. de un archivo digital comunitario.</p><br />
 
-Com-Phone es completamente gratuito, sin anuncios ni permisos innecesarios. La aplicación es una fuente abierta como parte del conjunto de herramientas Com-Me. Puede redirigirse a cualquiera de las aplicaciones Com-Me en GitHub: http://github.com/communitymedia
+<p>Orígenes fue creada en el marco de una experiencia de codiseño entre pueblos indígenas de la Patagonia austral y un equipo de investigación que vincula informática, humanidades y ciencias sociales. No se trata de un simple álbum de fotos sino de narrativas interactivas diseñadas para estimular la memoria colectiva y compartir conocimiento, ya sea en el ámbito familiar, comunitario o en el de las organizaciones de la sociedad civil. La app acompaña, de este modo, iniciativas de grupos vulnerables preocupados por sus sentidos de pertenencia, por las interrupciones en los procesos de transmisión intergeneracional y por las relaciones pasado-presente que activan la memoria.</p>
+<p>Para obtener más información sobre el proyecto, visite: <a href=\"https://apporigenes.blogspot.com\">https://apporigenes.blogspot.com</a>.</p>
+	]]></string>
 
-Para obtener más información sobre el proyecto Com-Me, visite: https://digitaleconomytoolkit.org</string>
-
-	<string name="editing_tips_photo" tools:ignore="UnusedResources">Toma una foto, o selecciona una imagen</string>
-	<string name="editing_tips_audio" tools:ignore="UnusedResources">Grabe audio o importe un sonido</string>
+	<string name="editing_tips_photo" tools:ignore="UnusedResources">Tomar una foto o seleccionar una imagen</string>
+	<string name="editing_tips_audio" tools:ignore="UnusedResources">Grabar audio o importar sonido</string>
 	<string name="editing_tips_text" tools:ignore="UnusedResources">Agregar texto como título o subtítulo</string>
-	<string name="playback_tips_video" tools:ignore="UnusedResources">Video: guardar como una película, o enviar directamente a YouTube</string>
-	<string name="playback_tips_html" tools:ignore="UnusedResources">HTML: crea una página web de historia</string>
-	<string name="playback_tips_smil" tools:ignore="UnusedResources">SMIL: Enviar a otros Com-Phones</string>
+	<string name="playback_tips_video" tools:ignore="UnusedResources">Video: guardar en formato de video o enviar directamente a YouTube</string>
+	<string name="playback_tips_html" tools:ignore="UnusedResources">HTML: crear una página web con la narrativa</string>
+	<string name="playback_tips_smil" tools:ignore="UnusedResources">SMIL: Enviar a otro dispositivo con Orígenes</string>
 </resources>

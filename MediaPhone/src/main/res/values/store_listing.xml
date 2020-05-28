@@ -9,7 +9,7 @@
   <p>The app is complemented by a community repository platform, which allows importing files (images, documents, audiovisual materials, etc.) from a digital community archive.  </p>  <br />
 
 <p>Orígenes was developed as part of a co-design process between indigenous peoples in Southern Patagonia and a research team linking computer science, humanities and social sciences. Rather than a simple photo album, users are able to create interactive narratives which stimulate collective memory and knowledge sharing, whether in the family, community or civil society organisations. Orígenes thus supports initiatives by vulnerable groups concerned about their sense of belonging, interruptions in intergenerational transmission processes and the past-present relationships that activate memory.</p>
-<p>  For more information on the project, visit: <a href="https://origenesapp.blogspot.com">https://origenesapp.blogspot.com</a>.</p>
+<p>  For more information on the project, visit: <a href=\"https://origenesapp.blogspot.com\">https://origenesapp.blogspot.com</a>.</p>
 	]]></string>
 
 	<string name="editing_tips_photo" tools:ignore="UnusedResources">Take a photo, or select an image</string>
