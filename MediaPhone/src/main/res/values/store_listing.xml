@@ -3,18 +3,19 @@
 
 	<string name="title" translatable="false" tools:ignore="UnusedResources">Orígenes</string>
 	<string name="short_description" tools:ignore="UnusedResources">Create, share and enjoy digital albums and community archives</string>
-	<string name="full_description" tools:ignore="UnusedResources">Orígenes allows you to create digital albums from new photos or existing images, to which you can add audio, text and genealogical information. It is completely free, and has no ads or unnecessary permissions. The albums (or \'narratives\') may remain on the mobile or tablet in which they were created, or be shared with specific people, and also exported as videos.<br />
-Each narrative can include as many frames as you want. Each individual frame may include an image or photo, text, and up to three layers of music or audio. All elements in each frame are optional and may be edited at any time. For example, you may pause an audio recording and then resume later, or load images from your media library. Orígenes can also be used simply as a photo journal, audio recorder, text and sound tool to comment on current news, or even as a multimedia survey tool.<br />
-  The app is complemented by an optional repository platform, which can be accessed through a password-protected account created by users. The platform links the app with files (images, documents, audiovisual materials, etc.) from a digital community archive.  <br />  <br />
+	<string name="full_description" tools:ignore="UnusedResources"><![CDATA[
+<p>Orígenes allows you to create digital albums from new photos or existing images, to which you can add audio, text and genealogical information. It is completely free, and has no ads or unnecessary permissions. The albums (or \'narratives\') may remain on the mobile or tablet on which they were created, or be shared with specific people, and also exported as videos.</p>
+<p>Each narrative can include as many frames as you want. Each individual frame may include an image or photo, text, and up to three layers of music or audio. All elements in each frame are optional and may be edited at any time. For example, you may pause an audio recording and then resume later, or load images from your media library. Orígenes can also be used simply as a photo journal, audio recorder, text and sound tool to comment on current news, or even as a multimedia survey app.</p>
+  <p>The app is complemented by a community repository platform, which allows importing files (images, documents, audiovisual materials, etc.) from a digital community archive.  </p>  <br />
 
-Orígenes was developed as part of a co-design process between indigenous peoples in Southern Patagonia and a research team linking computer science, humanities and social sciences. Rather than a simple photo album, users are able to create interactive narratives which stimulate collective memory and knowledge sharing, whether in the family, community or civil society organisations. Orígenes thus supports initiatives by vulnerable groups concerned about their sense of belonging, interruptions in intergenerational transmission processes and the past-present relationships that activate memory.<br /><br />
-
-  For more information on the project, visit: https://origenesapp.blogspot.com/</string>
+<p>Orígenes was developed as part of a co-design process between indigenous peoples in Southern Patagonia and a research team linking computer science, humanities and social sciences. Rather than a simple photo album, users are able to create interactive narratives which stimulate collective memory and knowledge sharing, whether in the family, community or civil society organisations. Orígenes thus supports initiatives by vulnerable groups concerned about their sense of belonging, interruptions in intergenerational transmission processes and the past-present relationships that activate memory.</p>
+<p>  For more information on the project, visit: <a href="https://origenesapp.blogspot.com">https://origenesapp.blogspot.com</a>.</p>
+	]]></string>
 
 	<string name="editing_tips_photo" tools:ignore="UnusedResources">Take a photo, or select an image</string>
 	<string name="editing_tips_audio" tools:ignore="UnusedResources">Record audio, or import a sound</string>
 	<string name="editing_tips_text" tools:ignore="UnusedResources">Add text as a title or subtitle</string>
 	<string name="playback_tips_video" tools:ignore="UnusedResources">Video: Save as a movie, or send directly to YouTube</string>
-	<string name="playback_tips_html" tools:ignore="UnusedResources">HTML: Create a story webpage</string>
-	<string name="playback_tips_smil" tools:ignore="UnusedResources">SMIL: Send to other Com-Phones</string>
+	<string name="playback_tips_html" tools:ignore="UnusedResources">HTML: Create a narrative webpage</string>
+	<string name="playback_tips_smil" tools:ignore="UnusedResources">SMIL: Send to another device (Orígenes required)</string>
 </resources>
