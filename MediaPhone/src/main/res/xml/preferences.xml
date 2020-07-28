@@ -118,14 +118,14 @@
 			android:summaryOn="@string/preferences_delete_after_importing_summary_on"
 			android:title="@string/preferences_delete_after_importing_title" />
 	</PreferenceCategory>
-	<PreferenceCategory android:title="@string/preferences_templates">
+	<!-- PreferenceCategory android:title="@string/preferences_templates">
 		<CheckBoxPreference
 			android:defaultValue="@bool/default_allow_deleting_templates"
 			android:key="@string/key_allow_deleting_templates"
 			android:summaryOff="@string/preferences_allow_deleting_templates_summary_off"
 			android:summaryOn="@string/preferences_allow_deleting_templates_summary_on"
 			android:title="@string/preferences_allow_deleting_templates_title" />
-	</PreferenceCategory>
+	</PreferenceCategory -->
 	<PreferenceCategory
 		android:key="@string/key_appearance_category"
 		android:title="@string/preferences_appearance">

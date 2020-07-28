@@ -253,7 +253,7 @@
 	<string name="preferences_about">About</string>
 	<string name="preferences_contact_us_title">Get in touch</string>
 	<string name="preferences_contact_us_summary">Email us your feedback, or report a problem</string>
-	<string name="preferences_contact_us_email_address" translatable="false">com-phone@robinson.ac</string>
+	<string name="preferences_contact_us_email_address" translatable="false">origenes@digitaleconomytoolkit.org</string>
 	<string name="preferences_contact_us_email_subject" translatable="false">%1$s feedback (%2$s)</string>
 	<string name="preferences_contact_us_email_body">Please enter your feedback here. If you are reporting a problem, please describe what happens in as much detail as possible.\n\n\n\n\nApplication version (please leave this in place): %1$s</string>
 	<string name="preferences_contact_us_email_error">Error: unable to send feedback – please email %1$s instead</string>
@@ -262,13 +262,13 @@
 	<string name="preferences_install_helper_narrative_success">The help and tips narrative has been installed</string>
 	<string name="preferences_help_translate_title">Help translate</string>
 	<string name="preferences_help_translate_summary">Add your language, or suggest translation improvements</string>
-	<string name="preferences_help_translate_link" translatable="false">https://www.transifex.com/communitymedia/mediaphone/</string>
+	<string name="preferences_help_translate_link" translatable="false">https://www.transifex.com/communitymedia/origenes-android/</string>
 	<string name="preferences_get_source_code_title">Get the source code</string>
 	<string name="preferences_get_source_code_summary">Browse, fork or report issues on GitHub</string>
-	<string name="preferences_get_source_code_link" translatable="false">https://github.com/communitymedia/mediaphone</string>
+	<string name="preferences_get_source_code_link" translatable="false">https://github.com/origenes-ancestors/mediaphone-origenes</string>
 	<string name="preferences_show_contributors_title">Contributors</string>
 	<string name="preferences_show_contributors_summary">Translators and open source software licenses</string>
-	<string name="preferences_get_contributors_link" translatable="false">http://www.digitaleconomytoolkit.org/com-phone/contributors.html</string>
+	<string name="preferences_get_contributors_link" translatable="false">https://digitaleconomytoolkit.org/origenes/contributors.html</string>
 	<string name="preferences_about_app_title" translatable="false">%1$s v%2$s</string>
 	<string name="preferences_about_app_summary" translatable="false">Build %1$d (%2$s); %3$s</string>
 	<string name="preferences_reset_default">The default value has been restored</string>

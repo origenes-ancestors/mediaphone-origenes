@@ -9,10 +9,10 @@ android {
 		buildConfigField 'String', 'PROVIDER_ID', '"' + manifestPlaceholders.providerId + '"'
 
 		minSdkVersion 14
-		targetSdkVersion 29
-		versionCode 36
-		versionName '1.6.1'
-		// versionNameSuffix = 'beta'
+		targetSdkVersion 28
+		versionCode 37
+		versionName '1.6.1a' // numbering matches Com-Phone version; lettering is Origenes-specific updates
+		// versionNameSuffix = '-beta'
 		resConfigs 'es', 'en'
 	}
 
@@ -40,8 +40,8 @@ dependencies {
 	implementation project(':MediaUtilities')
 
 	implementation 'com.google.android.material:material:1.1.0'
-	implementation 'androidx.exifinterface:exifinterface:1.1.0' // for auto-selection of export resolution
-	implementation 'androidx.core:core:1.2.0' // for FileProvider
+	implementation 'androidx.exifinterface:exifinterface:1.2.0' // for auto-selection of export resolution
+	implementation 'androidx.core:core:1.3.1' // for FileProvider
 
 	implementation 'com.facebook.fresco:fresco:2.1.0' // for ancestor image loading
 	implementation 'com.squareup.retrofit2:retrofit:2.5.0' // for API queries

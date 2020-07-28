@@ -23,44 +23,44 @@
 	<string name="import_finished">Se importaron con éxito nuevos archivos de narrativas</string>
 	<string name="video_export_format_incompatible_title">Advertencia</string>
 	<string name="video_export_format_incompatible_summary">Esta narración contiene audio que no es compatible con archivos video (actualmente se admiten M4A, MP3 y WAV). Este audio no se incluirá en el video ¿Continuar exportando?</string>
-	<string name="video_export_task_progress">Creando archivo de video – esto puede tomar algo de tiempo…</string>
+	<string name="video_export_task_progress">Creando archivo de video; esto puede tardar un tiempo…</string>
 	<string name="video_export_run_in_background">Ejecutar en segundo plano</string>
 	<string name="video_export_task_complete">Creación de video completado</string>
 	<string name="video_export_task_complete_notification">Toca para guardar o compartir tu video</string>
-	<string name="video_export_task_complete_hint">%1$s – toca la notificación para guardar o compartir tu video</string>
+	<string name="video_export_task_complete_hint">%1$s. Toca la notificación para guardar o compartir tu video.</string>
 
 	<!-- playback -->
-	<string name="error_loading_narrative_player">Error: no se pudo abrir la narración – por favor, inténtelo de nuevo</string>
+	<string name="error_loading_narrative_player">Error: no se pudo abrir la narración. Por favor, inténtelo de nuevo.</string>
 
 	<!-- export -->
 	<string name="export_narrative_title">Exportar esta narrativa</string>
 	<string name="export_video">Video (compartir, cargar, YouTube)</string>
 	<string name="export_html">HTML (crear una página web)</string>
 	<string name="export_smil">SMIL (enviar a %1$s)</string>
-	<string name="export_narrative_failed">Error: no se puede exportar la narración – por favor, inténtelo de nuevo</string>
-	<string name="export_missing_directory">Error: no se puede encontrar un directorio temporal – por favor, asegúrese de que su dispositivo o tarjeta SD tenga espacio libre disponible</string>
-	<string name="export_potential_problem">Advertencia: no se encontró almacenamiento externo – en algunos dispositivos, esto puede causar problemas de exportación y es posible que tenga problemas para reproducir la narrativa.</string>
-	<string name="export_creation_failed">Error: no se pudieron crear los archivos para exportar – por favor, inténtelo de nuevo</string>
+	<string name="export_narrative_failed">Error: no se puede exportar la narración. Por favor, inténtelo de nuevo.</string>
+	<string name="export_missing_directory">Error: no se puede encontrar un directorio temporal. Por favor, asegúrese de que su dispositivo o tarjeta SD tenga espacio libre disponible.</string>
+	<string name="export_potential_problem">Advertencia: no se encontró almacenamiento externo. En algunos dispositivos, esto puede causar problemas de exportación y es posible que tenga problemas para reproducir la narrativa.</string>
+	<string name="export_creation_failed">Error: no se pudieron crear los archivos para exportar. Por favor, inténtelo de nuevo.</string>
 	<string name="export_narrative_name">Por favor, ingrese un nombre</string>
-	<string name="export_narrative_name_exists">Error: ya existe un archivo con ese nombre – por favor, elija un nombre diferente</string>
+	<string name="export_narrative_name_exists">Error: ya existe un archivo con ese nombre. Por favor, elija un nombre diferente.</string>
 	<string name="export_narrative_name_blank">Error: por favor, ingrese un nombre</string>
 	<string name="export_narrative_saved">La narración se ha guardado en su dispositivo en la carpeta%1$s</string>
 
 	<!-- template browser -->
 	<string name="select_template_hint">Seleccione una plantilla para cargar, o mantenga presionado para ver opciones adicionales</string>
 	<string name="template_to_narrative_complete">La plantilla ha sido cargada</string>
-	<string name="delete_template_confirmation">Eliminar esta plantilla?</string>
+	<string name="delete_template_confirmation">¿Eliminar esta plantilla?</string>
 	<string name="delete_template_hint">La plantilla será borrada permanentemente</string>
 	<string name="delete_template_succeeded">La plantilla ha sido eliminada</string>
 	<string name="template_actions">Acciones de plantilla</string>
 	<string name="export_template">Exportar esta plantilla</string>
 	<string name="delete_template">Eliminar esta plantilla</string>
-	<string name="export_template_failed">Error: no se pudo exportar la plantilla – por favor, inténtelo de nuevo</string>
+	<string name="export_template_failed">Error: no se pudo exportar la plantilla. Por favor, inténtelo de nuevo.</string>
 	<string name="template_list_empty">No se encontraron plantillas\n\n\n Para hacer una narración existente en una plantilla, elija \"Crear plantilla\" en el menú de opciones del editor de cuadros</string>
 
 	<!-- text editor -->
-	<string name="error_loading_text_editor">Error al cargar el editor de texto – por favor, inténtalo de nuevo</string>
-	<string name="delete_text_confirmation">Eliminar este texto?</string>
+	<string name="error_loading_text_editor">Error al cargar el editor de texto. Pfavor, inténtalo de nuevo.</string>
+	<string name="delete_text_confirmation">¿Eliminar este texto?</string>
 	<string name="delete_text_hint">Todo el texto en este cuadro se eliminará permanentemente</string>
 	<string name="delete_text_succeeded">El texto ha sido eliminado</string>
 	<string name="split_text_add_content">Por favor, agregue texto antes de crear un nuevo cuadro</string>
@@ -69,16 +69,16 @@
 	<string name="span_text_single_frame">Este texto ahora se mostrará solo en este cuadro</string>
 
 	<!-- image editor -->
-	<string name="error_loading_image_editor">Error al cargar el editor de imágenes – por favor, inténtalo de nuevo</string>
-	<string name="error_camera_failed">Error: hubo un problema al comunicarse con la cámara – por favor, inténtelo de nuevo</string>
-	<string name="error_taking_picture_no_camera">No se ha podido tomar las fotos (cámara no detectada) – abrir la galería en su lugar</string>
+	<string name="error_loading_image_editor">Error al cargar el editor de imágenes. Por favor, inténtelo de nuevo.</string>
+	<string name="error_camera_failed">Error: hubo un problema al comunicarse con la cámara. Por favor, inténtelo de nuevo.</string>
+	<string name="error_taking_picture_no_camera">No se ha podido tomar las fotos (cámara no detectada). Abrir la galería en su lugar.</string>
 	<string name="retake_picture_hint">Toca la imagen para volver a tomar o importar de tu galería</string>
 	<string name="retake_picture_hint_no_camera">Toca la imagen para reemplazar desde tu galería</string>
 	<string name="focus_camera_hint">Toca la pantalla para enfocar la cámara</string>
 	<string name="camera_image_description">La imagen tomada con la cámara</string>
-	<string name="save_picture_failed">Error: no se pudo guardar la imagen – por favor, inténtelo de nuevo</string>
-	<string name="import_picture_failed">Error: no se pudo importar la imagen – por favor, inténtelo de nuevo</string>
-	<string name="import_picture_unavailable">Lo sentimos, no se pueden importar imágenes en este dispositivo – no se encontró galería</string>
+	<string name="save_picture_failed">Error: no se pudo guardar la imagen. Por favor, inténtelo de nuevo.</string>
+	<string name="import_picture_failed">Error: no se pudo importar la imagen. Por favor, inténtelo de nuevo.</string>
+	<string name="import_picture_unavailable">Lo sentimos, no se pueden importar imágenes en este dispositivo. No se encontró galería.</string>
 	<string name="delete_image_confirmation">¿Eliminar esta imagen?</string>
 	<string name="delete_image_hint">La imagen será borrada permanentemente</string>
 	<string name="delete_image_succeeded">La imagen ha sido eliminada</string>
@@ -88,26 +88,26 @@
 	<string name="span_image_single_frame">Esta imagen ahora se mostrará solo en este cuadro</string>
 
 	<!-- audio editor -->
-	<string name="error_loading_audio_editor">Error al cargar el editor de sonido – por favor, inténtelo de nuevo</string>
-	<string name="error_playing_audio">Error al reproducir el sonido – por favor, inténtelo de nuevo</string>
-	<string name="error_recording_audio">Error al grabar el sonido – por favor, inténtelo de nuevo</string>
-	<string name="error_recording_audio_no_microphone">No se puede iniciar la grabación (no se detectó micrófono) – abriendo la biblioteca de música en su lugar</string>
+	<string name="error_loading_audio_editor">Error al cargar el editor de sonido: por favor, inténtelo de nuevo.</string>
+	<string name="error_playing_audio">Error al reproducir el sonido: por favor, inténtelo de nuevo.</string>
+	<string name="error_recording_audio">Error al grabar el sonido: por favor, inténtelo de nuevo.</string>
+	<string name="error_recording_audio_no_microphone">No se puede iniciar la grabación (no se detectó micrófono).  Se abrirá la biblioteca de música del dispositivo.</string>
 	<string name="retake_audio_hint_no_recording">Toca el reproductor para reemplazar de tu biblioteca de música</string>
 	<string name="retake_audio_hint">Toca el reproductor para agregar al audio o importar desde tu biblioteca de música</string>
 	<string name="audio_playback_icon_description">Icono de reproducción de audio</string>
-	<string name="import_audio_failed">Error: no se pudo importar el audio – por favor, inténtelo de nuevo</string>
-	<string name="import_audio_unavailable">Lo sentimos, no se puede importar audio en este dispositivo – no se encontró biblioteca de música</string>
+	<string name="import_audio_failed">Error: no se pudo importar el audio. Por favor, inténtelo de nuevo.</string>
+	<string name="import_audio_unavailable">Lo sentimos, no se puede importar audio en este dispositivo. No se encontró biblioteca de música.</string>
 	<string name="delete_audio_confirmation">¿Eliminar este sonido?</string>
 	<string name="delete_audio_hint">El sonido se eliminará permanentemente</string>
 	<string name="delete_audio_succeeded">El sonido ha sido eliminado</string>
-	<string name="split_audio_add_content">Por favor, grabe el audio antes de crear un nuevo cuadro</string>
-	<string name="retake_audio_forbidden">Lo sentimos, este audio está en un formato que no se puede editar. Para reemplazarlo, elimine primero la grabación actual</string>
+	<string name="split_audio_add_content">Por favor, graba el audio antes de crear un nuevo cuadro</string>
+	<string name="retake_audio_forbidden">Lo sentimos, este audio está en un formato que no se puede editar. Para reemplazarlo, elimine primero la grabación actual.</string>
 	<string name="span_audio_add_content">Grabe el audio antes de incluir otros cuadros</string>
 	<string name="span_audio_multiple_frames">Este audio ahora se reproducirá en todos los cuadros después de este, hasta el siguiente cuadro con audio</string>
 	<string name="span_audio_single_frame">Este audio ahora se reproducirá solo en este cuadro</string>
 
 	<!-- frame editor -->
-	<string name="error_loading_frame_editor">Error al cargar el editor de cuadros – por favor, inténtalo de nuevo</string>
+	<string name="error_loading_frame_editor">Error al cargar el editor de cuadros: por favor, inténtelo de nuevo.</string>
 	<string name="delete_frame_confirmation">¿Eliminar este cuadro?</string>
 	<string name="delete_frame_hint">Todo el contenido de este cuadro se eliminará permanentemente</string>
 	<string name="play_narrative_add_content">Por favor, agregue contenido multimedia antes de comenzar la reproducción</string>
@@ -120,19 +120,19 @@
 	<string name="delete_narrative_hint">La narración a la que pertenece este cuadro se eliminará permanentemente</string>
 	<string name="delete_narrative_second_confirmation">Por favor, confirmar</string>
 	<string name="span_media_edit_image_title">Editar imagen</string>
-	<string name="span_media_edit_image">Esta imagen es de otro cuadro – ¿Desea agregar una nueva imagen aquí, o editar la original?</string>
+	<string name="span_media_edit_image">Esta imagen es de otro cuadro. ¿Desea agregar una nueva imagen aquí, o editar la original?</string>
 	<string name="span_media_edit_audio_title">Editar audio</string>
-	<string name="span_media_edit_audio">Este audio es de otro cuadro – ¿Desea agregar nuevo audio aquí, o editar el original?</string>
+	<string name="span_media_edit_audio">Este audio es de otro cuadro. ¿Desea agregar nuevo audio aquí, o editar el original?</string>
 	<string name="span_media_edit_text_title">Editar texto</string>
-	<string name="span_media_edit_text">Este texto es de otro cuadro – ¿Desea agregar texto nuevo aquí, o editar el original?</string>
+	<string name="span_media_edit_text">Este texto es de otro cuadro. ¿Desea agregar texto nuevo aquí, o editar el original?</string>
 	<string name="span_media_edit_original">Editar original</string>
 	<string name="span_media_add_new">Agregar nuevo</string>
 	<string name="permission_camera_rationale">%1$s necesita acceso a la cámara para poder tomar fotos. Por favor, conceda este permiso si desea usar imágenes en su narrativa </string>
 	<string name="permission_camera_error">Error: no se ha otorgado acceso a la cámara. Por favor, permita que %1$s acceda a la cámara y vuelva a intentarlo</string>
 	<string name="permission_audio_rationale">%1$snecesita acceso a micrófono para poder grabar audio. Por favor, conceda este permiso si desea usar audio en su narrativa </string>
 	<string name="permission_audio_error">Error: el acceso al micrófono no se ha otorgado. Por favor, permita que %1$s acceda al micrófono y vuelva a intentarlo</string>
-	<string name="import_multiple_items_succeeded">Importación completa – cada elemento se ha agregado a un nuevo cuadro después de este</string>
-	<string name="import_multiple_items_failed">No se puede completar la importación de elementos múltiples – por favor, compruebe los cuadros después de este para ver si hay errores</string>
+	<string name="import_multiple_items_succeeded">Importación completa: cada elemento se ha agregado a un nuevo cuadro después de este.</string>
+	<string name="import_multiple_items_failed">No se puede completar la importación de elementos múltiples: por favor, compruebe los cuadros después de este para ver si hay errores.</string>
 
 	<!-- ancestor-specific items -->
 	<string name="search_hint">Buscar…</string>
@@ -158,17 +158,17 @@
 	<string name="add_blank">Crea una nueva narrativa en blanco</string>
 	<string name="add_template">Elija una plantilla de narrativa</string>
 	<string name="narrative_list_empty">Toca + para comenzar</string>
-	<string name="narrative_folder_not_found">Error: no se pudo encontrar la carpeta desde donde importar las narraciones – por favor, establezca el directorio de importación en la configuración</string>
-	<string name="narrative_import_not_found">No se encontraron narraciones para importar – todos los archivos de una exportación SMIL deben colocarse en el directorio de importación seleccionado en la configuración (actualmente %1$s)</string>
+	<string name="narrative_folder_not_found">Error: no se pudo encontrar la carpeta desde donde importar las narraciones. Por favor, establezca el directorio de importación en la configuración.</string>
+	<string name="narrative_import_not_found">No se encontraron narraciones para importar: todos los archivos de una exportación SMIL deben colocarse en el directorio de importación seleccionado en la configuración (actualmente %1$s)</string>
 	<string name="permission_storage_rationale">%1$s necesita acceso al almacenamiento para poder importar narrativas, guardar contenido multimedia en su biblioteca y exportar videos a algunos servicios (por ejemplo, YouTube). Por favor, conceda este permiso si desea utilizar estas funciones</string>
 	<string name="permission_storage_error">Error: no se ha otorgado acceso al almacenamiento. Por favor, permita que %1$s acceda al almacenamiento de su dispositivo y vuelva a intentarlo</string>
-	<string name="permission_storage_unavailable_hint">%1$s se le ha denegado el acceso al almacenamiento de su dispositivo – la exportación a carpetas y algunos servicios externos pueden fallar</string>
+	<string name="permission_storage_unavailable_hint">%1$s se le ha denegado el acceso al almacenamiento de su dispositivo. La exportación a carpetas y algunos servicios externos pueden fallar.</string>
 
 	<!-- helper narrative -->
-	<string name="helper_narrative_frame_1">Bienvenido a\n%1$s!\n\nToca para editar,\nmantén presionado para reproducir</string>
+	<string name="helper_narrative_frame_1">¡Bienvenidx a\n%1$s!\n\nToca un cuadro para editar,\nmantén presionado para reproducir.</string>
 	<string name="helper_narrative_frame_2">Edición: agregar imágenes, sonidos o texto</string>
-	<string name="helper_narrative_frame_3">Reproducción: vea o exporte su narrativa</string>
-	<string name="helper_narrative_frame_4">Toque + para comenzar y ¡disfrútelo!\n\nNos encantaría saber cómo vas – puedes enviar tus comentarios a través de \"%1$s\" en %2$s</string>
+	<string name="helper_narrative_frame_3">Reproducción: ve o exporta tu narrativa</string>
+	<string name="helper_narrative_frame_4">Toca + para comenzar y ¡disfrútalo!\n\nNos encantaría saber cómo te resulta. Puedes enviar tus comentarios a través de \"%1$s\" en %2$s</string>
 
 	<!-- activity titles (API v11+) -->
 	<string name="title_frame_editor">Editar este cuadro</string>
@@ -190,8 +190,8 @@
 	<string name="preferences_pictures_to_media_summary_off">Las imágenes no se agregarán a tu galería</string>
 	<string name="preferences_pictures_to_media_summary_on">Las fotos se agregarán a tu galería</string>
 	<string name="preferences_audio_to_media_title">Agregar audio a la biblioteca</string>
-	<string name="preferences_audio_to_media_summary_off">Las grabaciones de audio no se agregarán a tu biblioteca de música</string>
-	<string name="preferences_audio_to_media_summary_on">Las grabaciones de audio se agregarán a tu biblioteca de música</string>
+	<string name="preferences_audio_to_media_summary_off">Las grabaciones de audio no se agregarán a su biblioteca de música</string>
+	<string name="preferences_audio_to_media_summary_on">Las grabaciones de audio se agregarán a su biblioteca de música</string>
 	<string name="preferences_audio_bitrate_title">Calidad de audio</string>
 	<string name="preferences_audio_bitrate_summary">Intente cambiar si tiene problemas de grabación de audio. Una mayor calidad causa una exportación más lenta</string>
 	<string name="preferences_playback_export">Reproducción y exportación</string>
@@ -225,15 +225,15 @@
 	<string name="preferences_start_scrolled_to_end_summary_off">Las narraciones se mostrarán normalmente</string>
 	<string name="preferences_start_scrolled_to_end_summary_on">Las narrativas se desplazarán hasta el final al inicio, lo cual es útil para añadir regularmente a las historias en curso</string>
 	<string name="preferences_show_back_button_title">Mostrar el botón \"hecho\"</string>
-	<string name="preferences_show_back_button_summary_off">El botón no se mostrará – use el botón atrás para navegar</string>
+	<string name="preferences_show_back_button_summary_off">El botón no se mostrará. Use el botón atrás para navegar.</string>
 	<string name="preferences_show_back_button_summary_on">El botón se mostrará</string>
-	<string name="preferences_beta">Beta: ADVERTENCIA – estas son características experimentales – ¡puede perder datos!</string>
+	<string name="preferences_beta">Beta: ADVERTENCIA: estas son características experimentales, ¡puede perder datos!</string>
 	<string name="preferences_spanning_media_title">Incluir contenido multimedia habilitado</string>
 	<string name="preferences_spanning_media_summary_off">Los contenidos multimedia solo aparecerán en un cuadro</string>
 	<string name="preferences_spanning_media_summary_on">Los elementos multimedia podrán abarcar varios cuadros</string>
 	<string name="preferences_audio_resampling_title">Calidad de audio exportada</string>
 	<string name="preferences_video_quality_title">Calidad de video exportada</string>
-	<string name="preferences_export_quality_summary">Mayor calidad conduce a mayores tamaños de archivos exportados La calidad inferior es más rápida de exportar</string>
+	<string name="preferences_export_quality_summary">Mayor calidad conduce a mayores tamaños de archivos exportados La calidad inferior es más rápida de exportar</string><!-- used for both audio and video export summary -->
 	<string name="preferences_video_format_title">Format vidéo exporté</string>
 	<string name="preferences_video_format_summary">Intente cambiar si experimenta problemas de exportación de video. MP4 es más compatible con reproductores de video externos</string>
 	<string name="preferences_audio_resampling_summary_legacy">El audio re-muestreado es más lento de exportar, pero es más compatible con reproductores de video externos</string>
@@ -244,10 +244,10 @@
 	<string name="preferences_contact_us_title">Estar en contacto</string>
 	<string name="preferences_contact_us_summary">Envíanos tus comentarios, o infórmanos de un problema</string>
 	<string name="preferences_contact_us_email_body">Por favor, ingrese sus comentarios aquí. Si está informando un problema, describa lo que ocurre con el mayor detalle posible.\n\n\n\n\nVersión de aplicación (deje esto en su lugar): %1$s</string>
-	<string name="preferences_contact_us_email_error">Error: no se puede enviar comentarios – envíe un correo electrónico %1$s en su lugar</string>
-	<string name="preferences_install_helper_narrative_title">Ayuda y consejos</string>
-	<string name="preferences_install_helper_narrative_summary">Toca para agregar una narrativa que contenga ayuda y sugerencias</string>
-	<string name="preferences_install_helper_narrative_success">La narrativa de ayuda y consejos ha sido instalada</string>
+	<string name="preferences_contact_us_email_error">Error: no se puede enviar comentarios. Envíe un correo electrónico %1$s en su lugar.</string>
+	<string name="preferences_install_helper_narrative_title">Opciones de ayuda e instrucciones</string>
+	<string name="preferences_install_helper_narrative_summary">Toca para agregar una narrativa que contenga ayuda e instrucciones.</string>
+	<string name="preferences_install_helper_narrative_success">La narrativa de ayuda e instrucciones ha sido instalada.</string>
 	<string name="preferences_help_translate_title">Ayuda a traducir</string>
 	<string name="preferences_help_translate_summary">Agregue su idioma, o sugiera mejoras de traducción</string>
 	<string name="preferences_get_source_code_title">Obtener el código de la fuente</string>
